@@ -1,0 +1,29 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+.statsWrapper {
+    background: $background;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 24px;
+
+    .stat {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &Title {
+            color: $subheading;
+            margin-bottom: 8px;
+        }
+
+        &Value {
+            font-weight: bold;
+            color: $headline;
+        }
+    }
+}

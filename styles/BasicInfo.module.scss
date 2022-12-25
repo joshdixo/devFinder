@@ -1,0 +1,48 @@
+@import './_mixins.scss';
+@import './_variables.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    min-width: 320px;
+    align-items: center;
+
+    .avatar {
+        img {
+            width: 100px;
+            height: 100px;
+            background: $tertiary;
+            border-radius: 50%;
+        }
+    }
+
+    .infoWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 16px;
+        height: 100px;
+
+        .name {
+            color: $headline;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .username {
+            color: $primary;
+            font-size: 1rem;
+            
+            transition: 0.2s;
+
+            &:hover {
+                color: darken($primary, 10%);
+                text-decoration: underline;
+            }
+        }
+
+        .date {
+            color: $subheading;
+        }
+    }
+}
