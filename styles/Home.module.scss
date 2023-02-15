@@ -17,7 +17,7 @@
   background: $background;
 
   .inputWrapper {
-    min-width: 376px;
+    width: 376px;
     display: flex;
     flex-direction: row;
     margin-bottom: 24px;
@@ -35,13 +35,13 @@
       border: 2px solid $stroke;
       background: $background;
       color: $headline;
-  
+
       &:focus {
-          border-color: $primary;
+        border-color: $primary;
       }
-  }
-  
-  .submitButton {
+    }
+
+    .submitButton {
       background: $primary;
       color: $button-text;
       font-weight: bold;
@@ -55,24 +55,39 @@
         background: darken($primary, 10%);
         cursor: pointer;
       }
-  }
+    }
   }
 
   .devWrapper {
     background: $cardbackground;
     border-radius: 8px;
     padding: 24px;
+    width: 376px;
 
     .description {
       color: $paragraph;
       display: block;
-      margin-top: 24px;
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid $primary;
+    }
+
+    .extraInfo {
+      display: block;
+      padding-top: 10px;
+      color: $paragraph;
+
+      svg {
+        position: relative;
+        top: 2px;
+        height: 1.2rem;
+      }
     }
   }
 
-// @include desktop() {
-//   .grid {
-//     width: 100%;
-//     flex-direction: column;
-//   }
+  // @include desktop() {
+  //   .grid {
+  //     width: 100%;
+  //     flex-direction: column;
+  //   }
 }

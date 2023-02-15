@@ -32,12 +32,16 @@
         .username {
             color: $primary;
             font-size: 1rem;
-            
             transition: 0.2s;
 
             &:hover {
                 color: darken($primary, 10%);
                 text-decoration: underline;
+            }
+
+            svg {
+                position: relative;
+                top: 2px;
             }
         }
 

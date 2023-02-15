@@ -1,8 +1,12 @@
 import React from "react";
+import Date from "./Date";
 import styles from '../styles/BasicInfo.module.scss';
+import { HiExternalLink } from 'react-icons/hi'
 
-const BasicInfo = ({user}) => {
-    const ghProfile = 'https://www.github.com/'+user.username;
+const BasicInfo = ({ user }) => {
+    const ghProfile = 'https://www.github.com/' + user.username;
+    console.log(user);
+
 
     return (
         <div className={styles.wrapper}>
@@ -13,9 +17,9 @@ const BasicInfo = ({user}) => {
             <div className={styles.infoWrapper}>
                 <span className={styles.name}>{user.name}</span>
                 <a href={ghProfile} target='_blank'>
-                    <span className={styles.username}>{user.username}</span>
+                    <span className={styles.username}>{user.username} <HiExternalLink /></span>
                 </a>
-                <span className={styles.date}>{user.regdate}</span>
+                <Date dateString={user.regdate} />
             </div>
         </div>
     )
